@@ -1,0 +1,16 @@
+.title-container {
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-bottom: 1.5rem;
+    background-color: whitesmoke;
+    border-bottom: 2px solid #c7c7c7
+}
+
+.title-container__title {
+    margin-top: 0;
+    font-size: 1.5rem
+}
+
+.title-container__subtitle {
+    font-size: 1rem
+}
