@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import '../css/PageTitle.css';
+import '../css/Title.css';
 
-function PageTitle(props) {
+function Title(props) {
     return (
         <div className="title-container">
             <h1 className="title-container__title">Movie Database API SPA PWA!</h1>
@@ -10,4 +10,4 @@ function PageTitle(props) {
     );
 }
 
-export default PageTitle;
+export default Title;
