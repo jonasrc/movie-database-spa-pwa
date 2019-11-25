@@ -6,8 +6,9 @@ import {
     Link,
     useRouteMatch,
     useParams
-} from 'react-router';
+} from 'react-router-dom';
 import Popular from "../pages/popular/js/Popular";
+import Movie from "../pages/movie/js/Movie";
 
 export default class AppRouter extends Component {
     render() {
@@ -18,6 +19,7 @@ export default class AppRouter extends Component {
                         <Popular/>
                     </Route>
                     <Route path="/movies/search">
+                        <Movie/>
                     </Route>
                 </Switch>
             </Router>

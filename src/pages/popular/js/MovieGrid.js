@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import '../css/MovieGrid.css'
-import Movie from './Movie'
+import Movie from './Movie';
+import '../css/MovieGrid.css';
 
 class MovieGrid extends Component {
     constructor() {
@@ -17,10 +17,10 @@ class MovieGrid extends Component {
                 results => {
                     return results.json()
                 }
-            ).then(data => {
-                let movies = data.results.map(movie => {
+            ).then((data) => {
+                let movies = data.results.map((movie) => {
                     return (
-                        <a href="https://www.uol.com.br">
+                        <a href="/movies/search">
                             <Movie
                                 key={movie.uniqueId}
                                 posterUrl={'http://image.tmdb.org/t/p/w780' + movie.poster_path}
