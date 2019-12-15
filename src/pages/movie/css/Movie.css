@@ -1,0 +1,22 @@
+.movie-details-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 65vh;
+    padding: 0 5vw;
+}
+
+.movie-details__poster {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.movie-details__info__title {
+    text-align: center;
+}
+
+.movie-details__info__overview {
+    font-size: 15px;
+    font-weight: normal;
+}
+

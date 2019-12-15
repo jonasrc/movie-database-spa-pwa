@@ -15,12 +15,10 @@ export default class AppRouter extends Component {
         return (
             <Router>
                 <Switch>
-                    <Route path="/movies/popular">
-                        <Popular/>
+                    <Route path="/popular">
+                        <Popular />
                     </Route>
-                    <Route path="/movies/search">
-                        <Movie/>
-                    </Route>
+                    <Route path="/movie/:movieId" component={Movie} />
                 </Switch>
             </Router>
         );

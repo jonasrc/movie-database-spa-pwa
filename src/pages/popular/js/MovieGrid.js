@@ -1,16 +1,16 @@
 import React, {Component} from 'react';
 import Movie from './Movie';
 import '../css/MovieGrid.css';
+import {Link} from "react-router-dom";
 
 class MovieGrid extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             movies: []
         };
     }
 
-    //component did mount
     componentDidMount() {
         fetch('https://api.themoviedb.org/3/movie/popular/?api_key=19dd866ef4c517ef4d726559bd269cb0')
             .then(
@@ -19,14 +19,15 @@ class MovieGrid extends Component {
                 }
             ).then((data) => {
                 let movies = data.results.map((movie) => {
-                    return (
-                        <a href="/movies/search">
-                            <Movie
-                                key={movie.uniqueId}
-                                posterUrl={'http://image.tmdb.org/t/p/w780' + movie.poster_path}
-                                title={movie.title} />
-                        </a>
-                    )
+                    // if(search === "" || search.toLowerCase().match("/" + movie.title.toLowerCase() + ".*/gm")){
+                        return (
+                            <Link to={"/movie/" + movie.id}>
+                                <Movie
+                                    posterUrl={'http://image.tmdb.org/t/p/w780' + movie.poster_path}
+                                    title={movie.title} />
+                            </Link>
+                        )
+                    // }
                 });
 
                 this.setState({
